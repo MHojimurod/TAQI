@@ -8,7 +8,7 @@ from myapp.models import News, NewsCategory
 
 
 class AllNews(generics.GenericAPIView):
-    def get(self):
+    def get(self, request):
         data = NewsCategory.objects.all()
         a = {
             "ok": True,
